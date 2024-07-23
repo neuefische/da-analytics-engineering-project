@@ -93,7 +93,7 @@ The Research Center for Aerospace (RCA) where you work for as Data Analyst wants
 ### Deliverables
 1. Jupyter notebook containing the loading and the cleaning of the flights data and the data import into the database.
 2. Jupyter notebook with calls to the meteostat API and the data import into the database.
-3. Jupyter notebook with EDA of weather data and flight traffic as and the investigation/analysis of the relation between defined weather event and flights irregularities
+3. Jupyter notebook with EDA of weather data and flight traffic. Investigate and analyze the relationship between a specific weather event (which you’ll define) and any irregularities in flight traffic. Be sure to include relevant visualizations to support your findings.
 4. ~10-minutes technical presentation (eg. via google slides) to your colleagues, presenting the results of your data exploration and answering your hypotheses.
 
 
