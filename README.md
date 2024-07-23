@@ -39,13 +39,16 @@ The Research Center for Aerospace (RCA) where you work for as Data Analyst wants
 
    
 
-6. For dbt repo you would need to create a separate GitHub repository. One owner, other team members collaborate. 
+6. For the dbt repo you would need to create a separate GitHub repository. One owner, other team members collaborate. 
 
 7. Prioritize using branches and pull requests reviewed by other team members, so the `main` remains the "source of truth"
 
-8. Additionally to that members can create fork of the dbt project repo to their GitHub. **BUT DO NOT CLONE THE FORKED REPO TO LOCAL.** We only work in the original repo (see 6. and 7.) **Make sure to synchronize your fork with the original before running any dbt models!**
+8. Additionally to that members can create fork of the dbt project repo to their GitHub.  
+   **BUT DO NOT CLONE THE FORKED REPO TO LOCAL.** We only work in the original dbt repo (see 6. and 7.) 
+   
+   **Make sure to synchronize your fork with the original before running any dbt models!**
 
-9. Each team we get a new project schema in our DB. Members will have write and read rights. (fingers crossed!)
+9.  Each team will get a new project schema in our DB. Members will have write and read rights. (fingers crossed!)
 
 10. (experimental) Each team member could use their own dbt Cloud to connect to the (hopefully synchronized) fork repos and to the project database schema. 
 
