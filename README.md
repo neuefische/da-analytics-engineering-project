@@ -33,60 +33,57 @@ Your task is to find a situation where the weather conditions have impacted flig
 
 ## Setting-up working environment
 
-​	**Project Schema in our DB**  
+### 💻 Project GitHub Repository (Single Repo Setup)
 
-1. In our DB each team will get a new project schema . Members will have write and read rights. (fingers crossed!)
-2. ⚠️ **Important Note:** After a group member creates or updates a table, she or he becomes the owner of the table and needs to run a query to grant permissions to the other team members. (Coaches will provide the query to each team)
+You’ll be using one GitHub repository for this entire project — including:
 
-​	**Project GitHub Repo**
+Python notebooks (for APIs, cleaning, and analysis)
 
->This repo will be for retrieving the data from sources and loading it to the DB
->Here you can also store all your development, experiments, analysis and visualizations. Organize your repo with folders, notebooks and sql files. 
-1. One team member can fork this repository to their GitHub
-2. The owner then adds the team members to the repository as collaborators (in GitHub repo: **Settings** > **Collaborators** > "**Add People**" Button)
-3. All team members can clone the repository from the owner to local machines
-4. Check your `.gitignore` in order to avoid pushing credentials to GitHub. 
+SQL scripts
 
-​	**dbt GitHub Repo**
+dbt project files (models, YAMLs, tests, etc.)
 
->This repo will only hold the dbt project files (yml files, sql model files etc.)
-1. One of you (could be same or different person) will need to create a **new empty GitHub repository for the dbt**. One owner, other team members can collaborate. 
-2. Prioritize using branches and pull requests reviewed by other team members, so the `main` remains the "source of truth"
-3. in dbt Cloud <u>only</u> the "dbt repo"-owner needs to ...
-	#### a. modify the Schema
-     <details><summary style="color:pink">(click for How-To)</summary> 
-          <i>assuming you have a dbt project already</i>
-          <ul>
-          <li>click on your account name in the left side menu 
-          <li> select <b>Your Profile</b>
-          <li> in the secondary navigation select <b>Credentials</b>
-          <li> click the project name and click the button in the lower right corner <b>Edit</b>
-          <li> re-enter your DB passwort and change the <b>Schema</b> to your group's schema name
-          <li> FYI: <b>Test Connection</b> is sometimes buggy.
-          <li> click the <b>Save</b> button
-          </ul>
-     </details>
-     
-     #### b. connect to the new dbt project GitHub repository   
-     
-     <details><summary style="color:pink">(click for How-To)</summary> 
-          <ul>
-          <li>click on your account name in the left side menu 
-          <li> select <b>Your Profile</b>
-          <li> in the secondary navigation select <b>Project</b> and click the project name
-          <li> under <b>Repository</b> click the GitHub link
-          <li> click the button <b>Edit</b>
-          <li> click the button <b>Disconnect</b> and then <b>Confirm Disconnect</b>
-          <li> now under <b>Repository</b> click <b>Configure Repository</b>
-          <li> select the <b>Git Clone</b> option (in parallel you need to go to you GitHub repo and copy the SHH git URL from your new dbt repo)
-          <li> in the <b>Git URL</b> field: paste the SHH git URL and click the "Import" button
-          <li> under <b>Repository</b> click the GitHub link again
-          <li> copy the <b>Deploy key</b> (everything including the "ssh-rsa...")
-          <li> add the <b>Deploy key</b> in your dbt repo (see <b>Settings</b>) or alternatively in your GitHub Profile Settings as <b>SSH key</b>
-          </ul>
-     </details><br>
+This ensures all your project components stay together and version-controlled in one place.
 
-⚠️**Important:** Do not mix these repositories on your local machine = Do not put one inside another. Keep them separate.
+```bash
+
+weather-vs-flights/
+│
+├── data/                    # optional: local data files, CSVs
+├── notebooks/               # Jupyter notebooks for API + EDA
+├── sql/                     # optional: any raw SQL queries
+├── dbt_project/             # where dbt project will live
+│   ├── models/
+│   ├── snapshots/
+│   ├── seeds/
+│   ├── analyses/
+│   └── dbt_project.yml
+├── .gitignore
+└── README.md
+
+```
+
+💡 You’ll initialize your dbt project inside the dbt_project/ folder, not in the repo root — this keeps the repo clean.
+You can select the subdirectory option when creating the project 
+
+
+<img width="476" height="300" alt="Screenshot 2025-11-03 at 00 05 31" src="https://github.com/user-attachments/assets/0bcb3d1f-6636-45dd-81e7-2b8d4b2c3753" />
+
+
+
+## Step-by-Step GitHub Setup
+
+1. One team member forks the base repository to their own GitHub.
+
+2. The owner goes to Settings → Collaborators → Add People and adds teammates as collaborators.
+
+3. Each member then clones that repository to their local machine.
+
+4. Make sure your .gitignore file excludes sensitive files (like database credentials or .env files).
+
+💡 Tip: You can test if collaboration is working by each creating a branch, making a small change (e.g. editing README.md), and opening a pull request (PR).
+
+
 
 ## Task Steps in Detail
 1. Select a historical weather event that occurred in the United States within the past 30 years that you believe would have led to the cancellation of flights. Research online. Based on the time period when the weather event occurred, determine which timeframe for flight data would best reflect both regular traffic and the associated irregularities.  
