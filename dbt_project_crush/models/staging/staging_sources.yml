@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: flights_data
+    schema: crush
+    tables:
+      - name: flights_raw
+        identifier: flights_200302
