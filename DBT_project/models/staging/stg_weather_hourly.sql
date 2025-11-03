@@ -9,7 +9,7 @@ WITH hourly_raw AS (
 hourly_flattened AS (
     SELECT airport_code,
            station_id,
-           (json_data ->> 'date')::DATE AS date,
+           (json_data ->> 'date')::timestamp as timestamp,
            (json_data ->> 'tavg')::NUMERIC AS avg_temp_c,
            (json_data ->> 'tmin')::NUMERIC AS min_temp_c,
            (json_data ->> 'tmax')::NUMERIC AS max_temp_c,
