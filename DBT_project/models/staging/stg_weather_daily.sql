@@ -4,7 +4,7 @@ WITH daily_raw AS (
     SELECT airport_code,
            station_id,
            JSON_ARRAY_ELEMENTS(extracted_data -> 'data') AS json_data
-    FROM {{source ('weather_daily', 'weather_daily_raw')}}
+    FROM {{source ('weather', 'weather_daily_raw')}}
 ),
 daily_flattened AS (
     SELECT airport_code,
