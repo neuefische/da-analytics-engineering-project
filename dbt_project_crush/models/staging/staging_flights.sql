@@ -1,11 +1,9 @@
-{{ config(materialized='view') }}
 
 WITH raw_flights AS (
     SELECT *
     FROM {{ source('flights_data', 'flights_raw') }}
 ),
 
--- Step 2: clean and standardize key fields
 cleaned_flights AS (
     SELECT
         flight_date::DATE AS flight_date,
