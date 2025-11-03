@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bubbles_project
+    schema: bubbles
+    tables:
+      - name: flights_raw  # <--logical name used in the models
+        identifier: flights_michael # <-- actual physical table queried
+
+      - name: airports
+        identifier: airports
