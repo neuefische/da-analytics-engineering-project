@@ -33,17 +33,89 @@ Your task is to find a situation where the weather conditions have impacted flig
 
 ## Setting-up working environment
 
-### 💻 Project GitHub Repository (Single Repo Setup)
+1. GitHub Setup
 
-You’ll be using one GitHub repository for this entire project — including:
+- Fork the project repository (the repo with scripts, notebooks, etc.).
 
-Python notebooks (for APIs, cleaning, and analysis)
+- Invite teammates as collaborators:
 
-SQL scripts
+    - Go to Settings → Collaborators → Add People
 
-dbt project files (models, YAMLs, tests, etc.)
+    - Add all team members so everyone has read/write access.
 
-This ensures all your project components stay together and version-controlled in one place.
+2. dbt Project Initialization
+
+- Create a new dbt project in the forked repo:
+
+    - When initializing, select a sub-directory for the dbt project (keeps things organized).
+
+- Link the dbt Cloud project to the GitHub repository:
+
+    - Copy the Deploy Key from dbt Cloud.
+
+- Add it to GitHub under Settings → Deploy Keys → Add Key.
+
+- Connect to the database:
+    - Set the schema to the group schema (shared with all team members).
+
+3. Add Teammates to dbt Cloud
+
+- Go to Project Settings → Team and invite all team members.
+
+- Everyone should now see the project in dbt Cloud.
+
+4. Branching Workflow
+
+- Create your branch on GitHub first:
+
+- e.g., dev_firstname
+
+- Important: Branch must exist in GitHub before you can select it in dbt Cloud.
+
+- Switch branch in dbt Cloud.
+
+- Select your branch to work on.
+
+- Develop on your branch:
+
+    - Add models, transformations, and tests.
+
+- Run models in dbt Cloud.
+
+5. Data Ingestion & Project Work
+
+- Select a weather event to focus on.
+
+- Collect flight and weather data for that event.
+
+- Load the data into your schema (group schema) using Python/SQL scripts.
+
+- Build the dbt pipeline:
+
+    - Staging → clean and standardize raw tables.
+
+    - Prep → join tables, add business logic, calculate metrics.
+
+    - Marts → aggregate and prepare business-ready tables for analysis.
+
+6. Collaboration & Merging
+
+When work is ready, create a Pull Request (PR) on GitHub from your branch → main.
+
+Team members review and merge.
+
+Switch back to main in dbt Cloud to continue work.
+
+💡 Tips
+
+Always refresh branch list in dbt Cloud after creating a new branch in GitHub.
+
+Work only in your branch to avoid overwriting others.
+
+Everyone works in the shared schema, so tables are accessible to teammates without copying.
+
+
+
 
 ```bash
 
