@@ -1,5 +1,5 @@
+{{ config(materialized='table') }}
 with flights_airports as (
-
 SELECT 
     faa, 
     name, 
@@ -12,4 +12,7 @@ SELECT
     tz, 
     dst
 FROM {{ ref('stg_airports') }}
-join {{ref('stg_airports)}}
+join {{ref('stg_flights_michael)}}
+on (faa)
+)
+SELECT* from flights_airports
