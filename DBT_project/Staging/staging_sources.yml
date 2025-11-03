@@ -9,3 +9,15 @@ sources:
 
       - name: airports
         identifier: airports
+
+  - name: weather
+    schema: s_tetyanashcherbinina
+    tables:
+      - name: weather_hourly_raw  # <--logical name used in the models
+        identifier: weather_hourly_raw # <-- actual physical table queried
+
+  - name: weather_daily
+    schema: s_emiliindasilva
+    tables:
+      - name: weather_daily_raw  # <--logical name used in the models
+        identifier: weather_daily_raw # <-- actual physical table queried
