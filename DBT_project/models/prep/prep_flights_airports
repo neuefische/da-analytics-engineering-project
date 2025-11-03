@@ -1,0 +1,15 @@
+with flights_airports as (
+
+SELECT 
+    faa, 
+    name, 
+    city, 
+    country, 
+    region, 
+    lat, 
+    lon, 
+    alt, 
+    tz, 
+    dst
+FROM {{ ref('stg_airports') }}
+join {{ref('stg_airports)}}
