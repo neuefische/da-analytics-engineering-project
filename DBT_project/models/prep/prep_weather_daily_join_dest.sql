@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 with weather_daily_join_dest as (
 select 
     *

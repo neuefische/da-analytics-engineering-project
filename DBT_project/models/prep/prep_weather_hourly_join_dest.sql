@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 with weather_hourly_join_dest as (
 select 
     *
