@@ -11,13 +11,18 @@ sources:
         identifier: airports
 
   - name: weather
-    schema: s_tetyanashcherbinina
+    schema: bubbles
     tables:
       - name: weather_hourly_raw  # <--logical name used in the models
         identifier: weather_hourly_raw # <-- actual physical table queried
 
+<<<<<<< HEAD:DBT_project/Staging/staging_sources.yml
   - name: weather_data
     schema: s_emiliindasilva
+=======
+  - name: weather_daily
+    schema: bubbles
+>>>>>>> 251a288b23e1bac720f02d75bdee841d3e30e222:DBT_project/models/staging/staging_sources.yml
     tables:
       - name: weather_daily_raw  # <--logical name used in the models
         identifier: weather_daily_raw # <-- actual physical table queried
