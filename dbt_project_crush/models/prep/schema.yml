@@ -3,3 +3,5 @@ version: 2
 models:
   - name: prep_weather
     description: "here."
+  - name: prep_flights
+    description: "Prepared flights data."
