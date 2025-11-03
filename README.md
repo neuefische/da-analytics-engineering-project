@@ -57,6 +57,8 @@ Your task is to find a situation where the weather conditions have impacted flig
 
 - Connect to the database:
     - Set the schema to the group schema (shared with all team members).
+ 
+<img width="476" height="300" alt="Screenshot 2025-11-03 at 00 05 31" src="https://github.com/user-attachments/assets/0bcb3d1f-6636-45dd-81e7-2b8d4b2c3753" />
 
 3. Add Teammates to dbt Cloud
 
@@ -139,21 +141,10 @@ weather-vs-flights/
 You can select the subdirectory option when creating the project 
 
 
-<img width="476" height="300" alt="Screenshot 2025-11-03 at 00 05 31" src="https://github.com/user-attachments/assets/0bcb3d1f-6636-45dd-81e7-2b8d4b2c3753" />
 
 
 
-## Step-by-Step GitHub Setup
 
-1. One team member forks the base repository to their own GitHub.
-
-2. The owner goes to Settings → Collaborators → Add People and adds teammates as collaborators.
-
-3. Each member then clones that repository to their local machine.
-
-4. Make sure your .gitignore file excludes sensitive files (like database credentials or .env files).
-
-💡 Tip: You can test if collaboration is working by each creating a branch, making a small change (e.g. editing README.md), and opening a pull request (PR).
 
 
 
