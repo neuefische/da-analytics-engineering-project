@@ -16,7 +16,7 @@ sources:
       - name: weather_hourly_raw  # <--logical name used in the models
         identifier: weather_hourly_raw # <-- actual physical table queried
 
-  - name: weather_daily
+  - name: weather_data
     schema: s_emiliindasilva
     tables:
       - name: weather_daily_raw  # <--logical name used in the models
