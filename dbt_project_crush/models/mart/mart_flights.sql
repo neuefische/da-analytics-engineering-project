@@ -1,4 +1,3 @@
-{{ config(materialized='table') }}
 WITH flights AS (
     SELECT *
     FROM {{ ref('prep_flights') }}
