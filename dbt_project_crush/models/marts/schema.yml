@@ -3,3 +3,5 @@ version: 2
 models:
   - name: mart_flights
     description: "Aggregated flight data mart."
+  - name: mart_weather
+    description: "Aggregated weather mart."
