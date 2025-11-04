@@ -1,6 +1,3 @@
-
-{{ config(materialized='table') }}
-
 WITH weather AS (
     SELECT *
     FROM {{ ref('prep_weather') }}
