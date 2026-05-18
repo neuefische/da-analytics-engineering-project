@@ -47,8 +47,8 @@ In our DB each team will get a new project schema . Members will have write and 
 
 
 Collaborate!
-1. One team member can fork this repository to their GitHub Account.
-2. The owner then adds the team members to the repository as collaborators  
+1. Pick one team member who will fork this repository to their GitHub Account. Same team member will also be the dbt manager and update the connections in their dbt account
+2. The repo owner then adds the team members to the repository as collaborators  
    (in GitHub repo: **Settings** > **Collaborators** > "**Add People**" Button)
 3. All team members can clone the repository from the owner to local machines
 4. Prioritize using branches and pull requests reviewed by other team members, so the main remains the "source of truth"
@@ -60,8 +60,13 @@ Collaborate!
 
 >This subfolder will only hold the dbt project files (yml files, sql model files etc.)
 1. Instead of having a separate GitHub repo (as in lectures), we can also keep the dbt repo in a **Subdirectory of the main Project Repo**. 
+   
+2. Add a new folder to your project folder. Name it `dbt` or so. 
+   - Copy all files and folders from your `dbt_meteostat` into the `dbt` folder
+   - do not copy `.git` to `dbt` folder. Remove it if you did.
+   - remove all `mart` models. Developing mart models would not fit in our time frame.
 
-2. in dbt Cloud <u style="color:red">only the owner of the forked Project Repo</u> needs to ...
+3. in dbt Cloud <u style="color:red">only the owner of the forked Project Repo and the dbt account</u> needs to ...
 	#### a. modify the Schema
      <details><summary style="color:pink">(click for How-To)</summary> 
           <i>assuming you have a dbt project already</i>
